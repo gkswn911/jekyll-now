@@ -5,6 +5,4 @@ comments: true
 tags: [jekyll, github, markdown]
 ---
 
-처음 시작하는 블로그
-
-#잘 되는걸까
+next time,

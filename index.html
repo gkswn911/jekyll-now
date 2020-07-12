@@ -16,7 +16,7 @@ layout: default
     </article>
   {% endfor %}
 </div> -->
-"{"% for post in paginator.posts %"}"
+{% for post in paginator.posts %}
 <article class="post">
   <div class="post-content">
     <h2 class="post-title"><a href=""></a></h2>
@@ -24,5 +24,5 @@ layout: default
     <span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;</span>
   </div>
 </article>
-"{"% endfor %"}"
-"{"% include pagination.html %"}"
+{% endfor %}
+{% include pagination.html %}

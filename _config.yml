@@ -15,7 +15,7 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 #pagination
 plugin:
   - jekyll-paginate  # 플러그인을 사용
-paginate: 2     #한 페이지당 보여줄 posts 수
+paginate: 3     #한 페이지당 보여줄 posts 수
 paginate_path: "/posts/page/:num" #다음 페이지에 해당하는 URL
 #
 # Flags below are optional

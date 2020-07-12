@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="posts">
+<!-- <div class="posts">
   {% for post in site.posts %}
     <article class="post">
 
@@ -15,4 +15,15 @@ layout: default
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
-</div>
+</div> -->
+"{"% for post in paginator.posts %"}"
+<article class="post">
+  <div class="post-content">
+    <h2 class="post-title"><a href=""></a></h2>
+    <p></p>
+    <span class="post-date">&nbsp;&nbsp;&nbsp;</span>
+  </div>
+</article>
+"{"% endfor %"}"
+# pagination 알고리즘 구현한 html 파일
+"{"% include pagination.html %"}"

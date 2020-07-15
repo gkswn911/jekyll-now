@@ -1,0 +1,79 @@
+I":<h1 id="mnist-database">MNIST DataBase</h1>
+
+<hr />
+
+<h4 id="mnist-database-란">MNIST DataBase 란?</h4>
+
+<blockquote>
+  <p>National Institute of Standards and Technology의 줄임말이며, NIST의 손으로 쓴 글자 Dataset 에서 숫자만 따로 뽑아낸 Dataset 이다. 0 ~ 255 사이의 값을 가지는 흑백 이미지, 28 x 28, 70,000개의 이미지 ( 60,000 개의 Training Set &amp; 10,000 Test Set ) 으로 구성되어있다.</p>
+</blockquote>
+
+<h4 id="왜-사용하는가">왜 사용하는가?</h4>
+
+<p>​	1. 다른 DataSet보다 비교적 구하기 쉽다는 장점과  이미지 형태부터 <strong>csv</strong> 형식까지 편하게 선택할 수 있다는 장점을 가지고 있다. 여기서 csv 형식이란 comma - separated values 의 약자이며 몇 가지 필드를 <strong>쉼표(,)</strong> 로 구분한 텍스트 데이터 및 텍스트 파일을 말한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># tensorflow
+</span><span class="kn">from</span> <span class="nn">tf.examples.tutorials.mnist</span> <span class="kn">import</span> <span class="n">input_data</span>
+<span class="n">mnist</span> <span class="o">=</span> <span class="n">imput_data</span><span class="p">.</span><span class="n">read_data_sets</span><span class="p">()</span>
+
+<span class="c1"># keras
+</span><span class="kn">import</span> <span class="nn">keras</span>
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">keras</span><span class="p">.</span><span class="n">datasets</span><span class="p">.</span><span class="n">mnist</span><span class="p">.</span><span class="n">load_data</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>특히, 파일을 전부 다운로드하는 수고도 필요 없이 사용하고 싶은 Package에서 두 세줄 가져와 사용할 수 있다.</p>
+
+<p>​ 2. 모델의 성능을 확인하기 쉽다.</p>
+
+<p>뉴럴넷 모델들이 <strong>성과 개선 (feature importance)</strong> 을 알려주지 않아 예측 결과와 feature 사이의 거리를 파악하기 힘들다는 단점이 있지만, MNIST DateSet으로 예측한 결과는 눈으로 좋고 나쁨을 직관적으로 확인할 수 있다.</p>
+
+<p>성능이 좋은 모델인지 아닌지는 그저 눈으로 확인한 Test Image가 직관적으로 읽기 쉬운 숫자인지 아닌지를 판단해보면 알 수 있기 때문이다.</p>
+
+<p>​	3.<strong>좋은 성능이 쉽게 나온다.</strong></p>
+
+<p>간단한 모델 구성으로도 비교적 좋은 성능이 나오는 데다가 모델 구성별로 대략의 baseline 성능도 알려져 있기 때문에 그래프가 정상적으로 작성되었는지, hyperparametet는 적당한 값인지, 쉽게 판단이 가능하다.</p>
+
+<p>각 모델별의 성능은 아래와 같다고 한다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Linear Classifier</strong></th>
+      <th><strong>92.4%</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Neural Network (2 layer )</strong></td>
+      <td><strong>98.4%</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Neural Network (6 layer )</strong></td>
+      <td><strong>99.65%</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Convolution Neural Network ( 6 layer )</strong></td>
+      <td><strong>99.79%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<p>### Similar DataSet</p>
+
+<blockquote>
+  <p>MNIST와 유사하되 조금 더 실생활에 근접한 데이터들로 구성된 DataSet들도 있다. 다음과 같이 Fashion MNIST,  CIFAR 10, CIFAR 100 등이 있다.</p>
+</blockquote>
+
+<p><img src="/images/mnist.png" alt="mnist" /></p>
+
+<p><img src="/images/cifar10.png" alt="cifar10" /></p>
+
+<p><img src="/images/cifar100.png" alt="cifar100" /></p>
+
+<p>이상으로 MNIST DataBase에 대한 포스팅을 마무리 하려 한다.</p>
+
+<p>AI를 공부하는 과정에서 DataBase, DataSet을 공부하는것은 꼭 거쳐가야하는 과정인것같다.</p>
+
+<p>타 공부를 하면서 병행하며 공부해야겠다고 느꼈다.</p>
+:ET

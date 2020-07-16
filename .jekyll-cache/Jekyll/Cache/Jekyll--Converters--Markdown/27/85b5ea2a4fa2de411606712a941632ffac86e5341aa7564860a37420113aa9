@@ -1,21 +1,15 @@
-I"x<div class="posts">
+I"�<div class="posts">
   
     <article class="post">
 
-      <h1><a href="/test/">Test</a></h1>
+      <h1><a href="/Data_Driven-01/">데이터 접근 방식</a></h1>
 
       <div class="entry">
-        <p>&lt;!– —
-layout: post
-title: Python &amp; Ruby 문자열 - 01
-comments: true
-tags: [jekyll, github, markdown]
-categories: [ ai, python ]
-—</p>
+        <h1 id="cs231n-1-1--introduction-to-convolutional-neural-networks-for-visual-recognition">[CS231n] 1-1 . Introduction to Convolutional Neural Networks for Visual Recognition</h1>
 
       </div>
 
-      <a href="/test/" class="read-more">Read More</a>
+      <a href="/Data_Driven-01/" class="read-more">Read More</a>
     </article>
   
     <article class="post">

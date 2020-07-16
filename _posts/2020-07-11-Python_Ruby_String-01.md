@@ -3,7 +3,7 @@ layout: post
 title: Python & Ruby 문자열 - 01
 comments: true
 tags: [jekyll, github, markdown]
-permalink: /tt/
+categories: [ python ]
 ---
 
 # Python & Ruby 문자열

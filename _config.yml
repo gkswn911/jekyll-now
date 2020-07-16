@@ -11,11 +11,13 @@ description: 손에 잡히는 개발자
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
+# category_list 정의
+category_list: [ai, python, algorithm, news, etc]
 
 #pagination
 plugin:
   - jekyll-paginate  # 플러그인을 사용
-paginate: 3     #한 페이지당 보여줄 posts 수
+paginate: 1    #한 페이지당 보여줄 posts 수
 paginate_path: "/posts/page/:num" #다음 페이지에 해당하는 URL
 #
 # Flags below are optional

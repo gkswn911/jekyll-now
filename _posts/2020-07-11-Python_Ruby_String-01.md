@@ -3,6 +3,7 @@ layout: post
 title: Python & Ruby 문자열 - 01
 comments: true
 tags: [jekyll, github, markdown]
+permalink: /tt/
 ---
 
 # Python & Ruby 문자열
@@ -13,7 +14,7 @@ AI 공부를 시작함에 있어서 Python을 기반으로한 Tensorflow 와 Ker
 
 Python 과 공통점을 지닌 Ruby를 기초부터 심화단계까지 공부하려고 한다.
 
-첫 출발선은 문자열로 정했다. 
+첫 출발선은 문자열로 정했다.
 
 
 

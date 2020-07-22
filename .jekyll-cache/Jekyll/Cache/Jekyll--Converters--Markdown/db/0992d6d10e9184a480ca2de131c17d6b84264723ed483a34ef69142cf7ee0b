@@ -1,0 +1,25 @@
+I"H<h1 id="eulerproject-01">EulerProject-01</h1>
+
+<hr />
+
+<h3 id="1000보다-작은-자연수-중에서-3-또는-5의-배수를-모두-더하면">1000보다 작은 자연수 중에서 3 또는 5의 배수를 모두 더하면?</h3>
+
+<blockquote>
+  <p>10보다 작은 자연수 중에서 3 또는 5의 배수는 3, 5, 6, 9 이고, 이것을 모두 더하면 23입니다.
+1000보다 작은 자연수 중에서 3 또는 5의 배수를 모두 더하면 얼마일까요?</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">continue</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>233168
+</code></pre></div></div>
+
+<p>다음과 같이 결과가 나왔다. 어려운 부분이 없기 때문에 설명은 생략한다.</p>
+:ET

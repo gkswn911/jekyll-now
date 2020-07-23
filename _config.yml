@@ -5,6 +5,9 @@
 # Name of your site (displayed in the header)
 name: Just Do 2T
 
+# CSS:
+css:
+  /_sass/syntax.css
 # Short bio or description (displayed in the header)
 description: 손에 잡히는 개발자
 

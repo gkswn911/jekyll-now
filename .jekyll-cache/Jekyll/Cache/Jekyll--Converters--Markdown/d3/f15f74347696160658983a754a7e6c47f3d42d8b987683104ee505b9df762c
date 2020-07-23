@@ -1,0 +1,36 @@
+I"<h1 id="eulerproject-05">EulerProject-05</h1>
+<hr />
+
+<h3 id="1--20-사이의-어떤-수로도-나누어-떨어지는-가장-작은-수">1 ~ 20 사이의 어떤 수로도 나누어 떨어지는 가장 작은 수</h3>
+
+<blockquote>
+  <p>1 ~ 10 사이의 어떤 수로도 나누어 떨어지는 가장 작은 수는 2520입니다.
+그러면 1 ~ 20 사이의 어떤 수로도 나누어 떨어지는 가장 작은 수는 얼마입니까?</p>
+</blockquote>
+
+<p>처음 문제를 보고 당황했지만 생각을 조금 해보니 바로 해결되었다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MIN_num</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span>  <span class="mi">5</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">11</span> <span class="o">*</span> <span class="mi">13</span> <span class="o">*</span> <span class="mi">17</span> <span class="o">*</span> <span class="mi">19</span>    <span class="c1"># 1~ 20 사이의 소수의 곱
+</span><span class="n">breaker</span> <span class="o">=</span> <span class="bp">False</span> <span class="c1"># 이중 loop 탈출하기 위한 불리안 타입의 변수
+</span><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">MIN_num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">20</span><span class="p">):</span>  <span class="c1"># 소수의 곱이 1 ~ 20 사이의 수로 나뉘면 실행
+</span>            <span class="k">print</span><span class="p">(</span><span class="n">MIN_num</span><span class="p">)</span>
+            <span class="n">breaker</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">break</span>
+        <span class="k">elif</span><span class="p">(</span> <span class="n">MIN_num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># 나뉘지 않을 시 소수의 곱을 더함
+</span>            <span class="n">MIN_num</span> <span class="o">=</span> <span class="n">MIN_num</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span>  <span class="mi">5</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">11</span> <span class="o">*</span> <span class="mi">13</span> <span class="o">*</span> <span class="mi">17</span> <span class="o">*</span> <span class="mi">19</span>
+            <span class="k">break</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">breaker</span> <span class="o">==</span> <span class="bp">True</span><span class="p">):</span>
+        <span class="k">break</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>232792560
+</code></pre></div></div>
+
+<p>소수의 곱으로는 모든 자연수를 만들 수 있다고 생각을 했고, 최소한의 소수의 곱을 미리 MIN_num 변수에 넣어줬다.
+이후 MIN_num(소수의 곱) 이 1 ~ 20사이의 모든 자연수에 나누어 떨어지지 않을 시 MIN_num x= MIN_num 을 수행해준후 다시 루프로 돌아간다.
+1 ~ 20 사이의 모든 자연수에 나누어 떨어지게 되면 Boolean 타입의 breaker 변수에 True 값은 주며 이중 루프를 탈출하며 끝난다.</p>
+:ET

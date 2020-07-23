@@ -1,0 +1,32 @@
+I"v<h1 id="eulerproject-04">EulerProject-04</h1>
+<hr />
+
+<h3 id="세자리-수를-곱해-만들-수-있는-가장-큰-대칭수">세자리 수를 곱해 만들 수 있는 가장 큰 대칭수</h3>
+
+<blockquote>
+  <p>앞에서부터 읽을 때나 뒤에서부터 읽을 때나 모양이 같은 수를 대칭수(palindrome)라고 부릅니다.
+두 자리 수를 곱해 만들 수 있는 대칭수 중 가장 큰 수는 9009 (= 91 × 99) 입니다.
+세 자리 수를 곱해 만들 수 있는 가장 큰 대칭수는 얼마입니까?</p>
+</blockquote>
+
+<p>회문(palindrome)인지 판별할 수 있는지를 물어보는 문제였다. 추가적으로 세자리 수를 곱해 만들 수 있는 가장 큰 대칭수를 구한다는 조건이 있다.
+코드는 다음과 같다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MAX</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">list_pal</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">j</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">list_pal</span> <span class="o">==</span> <span class="n">list_pal</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">list_pal</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">MAX</span> <span class="p">):</span>
+            <span class="n">MAX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">list_pal</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">MAX</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">continue</span>
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>906609
+</code></pre></div></div>
+
+<p>조건에 세 자리 수를 곱하라는 요구에 따라 100~ 999 사이의 숫자를 이중for문으로 돌렸다. 이후에 곱해서 나온 값들을 str 타입으로 형변환을 해준뒤 python에서 제공하는 슬라이싱(Slicing) 활용하여 회문을 판별 후 크기의 대소를 확인 후 변수 MAX에 가장 큰 값을 넣어줬다. 그렇게 결과값이 출력된 후 종료된다.</p>
+
+<p>회문판별 문제를 파이썬으로 접한건 처음인데, 좋은 메서드들을 활용했더니 쉽게 풀렸다. 다시 한번 C언어로 구현해봐야겠다고 느꼈다.</p>
+:ET

@@ -3,7 +3,7 @@ layout: post
 title: Algorithm_BlackJack
 comments: true
 tags: [jekyll, github, markdown]
-categories: [ Algorithm ]
+categories: [ algorithm ]
 ---
 
 # BaekJoon 2798 [BruteForce]
